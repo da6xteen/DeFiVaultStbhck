@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: stablehacks-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: stablehacks
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - stablehacks-net
+
+  redis:
+    image: redis:7-alpine
+    container_name: stablehacks-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - stablehacks-net
+
+networks:
+  stablehacks-net:
+    driver: bridge
+
+volumes:
+  postgres_data:

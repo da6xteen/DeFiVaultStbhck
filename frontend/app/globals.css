@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-ibm-plex-mono: 'IBM Plex Mono', monospace;
+}
+
+body {
+  color: white;
+  background-color: #080c14;
+  font-family: var(--font-inter);
+}
+
+.font-mono {
+  font-family: var(--font-ibm-plex-mono);
+}

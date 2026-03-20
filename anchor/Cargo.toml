@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "programs/vault",
+    "programs/kyc_registry",
+    "programs/compliance_oracle"
+]
+resolver = "2"
